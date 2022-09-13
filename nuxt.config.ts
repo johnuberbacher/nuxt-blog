@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     modules: [
         '@pinia/nuxt',
     ],
+    target: 'static',
     router: {
       base: '/nuxt-blog'
     },
