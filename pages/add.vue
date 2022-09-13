@@ -64,7 +64,7 @@ export default {
     methods: {
         onSubmit() {
             console.log(this.categoryStore)
-            this.store.addBlog(this.title, this.imageUrl, this.author, this.body, this.selectedCategory)
+            this.store.addBlog(this.title, this.imageUrl, this.author, this.body, this.selectedCategory, new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) )
             this.title = ''
             this.imageUrl = ''
             this.author = ''

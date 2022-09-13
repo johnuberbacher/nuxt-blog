@@ -12,11 +12,9 @@
     <div class="user-img rounded-circle me-3">
       <div class="bg-primary"></div>
     </div>
-    <div class="d-flex flex-column align-items-start justify-content-center text-left">
+    <div>
       <div class="fw-bold">{{ store.blogs[this.$route.params.id].author }}</div>
-      <div class="fs-7">
-        <i class="bi bi-calendar2-event-fill me-2 text-primary small"></i>September 24, 2022
-      </div>
+      <div class="fw-semibold fs-8"><i class="bi bi-calendar2-event-fill me-2 text-primary"></i>{{ store.blogs[this.$route.params.id].dateTime }}</div>
     </div>
   </div>
   <hr class="mt-4 mb-5" />
@@ -38,7 +36,7 @@ export default {
 <style lang="scss" scoped>
 .blog-img {
   height: 0;
-  padding-bottom: 33%;
+  padding-bottom: 56.25%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

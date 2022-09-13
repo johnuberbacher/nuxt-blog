@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     ],
     script: [
         {
-            src: 'bootstrap/dist/js/bootstrap.bundle.min.js'
+            src: 'bootstrap/dist/js/bootstrap.bundle.js'
         }
     ],
     modules: [
@@ -18,6 +18,6 @@ export default defineNuxtConfig({
     ],
     target: 'static',
     router: {
-      base: '/nuxt-blog'
+        base: '/nuxt-blog'
     },
 })

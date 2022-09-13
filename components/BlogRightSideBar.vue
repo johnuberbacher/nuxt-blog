@@ -1,22 +1,22 @@
 <template>
   <div class="newsletter mb-4">
     <div class="title bg-dark rounded-2 text-white py-2 px-3 fw-semibold mb-3">
-      <i class="bi bi-newspaper me-3"></i>Newsletter
+      <i class="bi bi-newspaper me-3"></i>Leave a Comment
     </div>
     <div class="bg-light p-3 rounded-3 fw-semibold">
       Etiam sit amet nisl purus in mollis nunc. Sed velit duis dignissim sodales
       ut eu sem integer. Egestas dui id ornare arcu placerat.
-      <form class="mt-4">
+      <form class="mt-4" v-on:submit.prevent="onSubmit">
         <div class="mb-3">
-          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name"
-            aria-describedby="emailHelp" />
+          <input type="text" class="form-control" v-model="name" required placeholder="Your Name"
+            aria-describedby="name" />
         </div>
         <div class="mb-3">
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"
-            aria-describedby="emailHelp" />
+          <textarea type="text" class="form-control" rows="4" v-model="comment" required placeholder="Your Comment"
+            aria-describedby="comment"></textarea>
         </div>
         <button type="submit" class="btn btn-success w-100">
-          Join Newsletter
+          Submit
         </button>
       </form>
     </div>
@@ -50,13 +50,29 @@
 
 <script >
 import { useBlogStore } from '@/stores/blogs'
+import { useCommentStore } from '@/stores/comments'
 
 export default {
   setup() {
     const store = useBlogStore()
+    const commentStore = useCommentStore()
     return {
       store,
+      commentStore,
     }
   },
+  data() {
+    return {
+      name: '',
+      comment: '',
+    }
+  },
+  methods: {
+    onSubmit() {
+      this.commentStore.addComment(this.$route.params.id, this.name, this.comment, new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) )
+      this.name = ''
+      this.comment = ''
+    }
+  }
 }
 </script>

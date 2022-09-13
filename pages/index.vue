@@ -4,7 +4,7 @@
             <div class="col-md-8 mb-5">
                 <div
                     class="bg-primary p-5 h-100 d-flex flex-column justify-content-center text-center align-items-center rounded-4">
-                    <h1 class="text-white">Nuxt&nbsp;3 + Pinia + Bootstrap</h1>
+                    <h1 class="text-white">Nuxt3 +&nbsp;Pinia</h1>
                 </div>
             </div>
             <div class="col-md-4 mb-5" v-bind:key="blog.title" v-for="(blog, index) in store.blogs">
@@ -13,6 +13,7 @@
                 :title="blog.title" 
                 :imageUrl="blog.imageUrl" 
                 :author="blog.author"
+                :dateTime="blog.dateTime"
                 :category="store.categories[store.blogs[index].category]" />
             </div>
         </div>

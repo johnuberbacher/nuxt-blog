@@ -5,17 +5,27 @@ export const useCommentStore = defineStore('comments', {
     comments: [
       {
         "blogIndex": 0,
-        "comment": "Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis!!!!!",
+        "commentAuthor": "John Uberbacher",
+        "commentBody": "Ut illum labore sed quibusdam possimus aut voluptate facilis. In quod neque vel quia maxime ut minus. Et esse eveniet aut aspernatur omnis exercitationem magnam. Et dolorem voluptatem qui repellat iusto ab veniam consectetur sed voluptatem quos aut neque facilis ut beatae minus.",
+        "dateTime": 'Tuesday, Sep 13, 202'
       },
       {
         "blogIndex": 1,
-        "comment": "Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis!!!!!",
+        "commentAuthor": "Bruce Banner",
+        "commentBody": "Ut illum labore sed quibusdam possimus aut voluptate facilis. In quod neque vel quia maxime ut minus. Et esse eveniet aut aspernatur omnis exercitationem magnam. Et dolorem voluptatem qui repellat iusto ab veniam consectetur sed voluptatem quos aut neque facilis ut beatae minus.",
+        "dateTime": 'Tuesday, Sep 13, 2022'
+      },
+      {
+        "blogIndex": 5,
+        "commentAuthor": "Stephen Strange",
+        "commentBody": "Ut illum labore sed quibusdam possimus aut voluptate facilis. In quod neque vel quia maxime ut minus. Et esse eveniet aut aspernatur omnis exercitationem magnam. Et dolorem voluptatem qui repellat iusto ab veniam consectetur sed voluptatem quos aut neque facilis ut beatae minus.",
+        "dateTime": 'Tuesday, Sep 13, 2022'
       },
     ],
   }),
   actions: {
-    async addComment(title, comment) {
-      this.blogs.push({ title, comment })
+    async addComment(blogIndex, commentAuthor, commentBody, dateTime) {
+      this.comments.push({blogIndex, commentAuthor, commentBody, dateTime })
     },
   },
 })

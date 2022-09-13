@@ -33,4 +33,5 @@ $font-sizes: (
 $input-font-size: 12px;
 $input-font-weight: 500;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import 'bootstrap';
+@import 'bootstrap/scss/bootstrap.scss';

@@ -18,7 +18,7 @@
                     </div>
                     <div>
                         <div class="fw-bold">{{props.author}}</div>
-                        <div class="fs-7">September 24, 2022</div>
+                        <div class="fw-semibold fs-10"><i class="bi bi-calendar2-event-fill me-2 text-primary"></i>{{props.dateTime}}</div>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
     </NuxtLink>
 </template>
 <script setup>
-const props = defineProps(['index', 'title', 'imageUrl', 'author', 'category'])
+const props = defineProps(['index', 'title', 'imageUrl', 'author', 'category', 'dateTime'])
 </script>
 <style lang="scss" scoped>
 .blog {

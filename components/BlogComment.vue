@@ -1,34 +1,22 @@
 <template>
     <div class="blog-comment rounded-4 border p-4 mt-3">
-        <div class="d-flex flex-row align-items-center">
+        <div class="d-flex flex-row align-items-start">
             <div class="user-img rounded-circle me-3">
                 <div class="bg-primary"></div>
             </div>
-            <div class="d-flex flex-column align-items-start justify-content-center text-left">
-                <div class="fw-bold fs-8">{{ store.blogs[this.$route.params.id].author }}</div>
-                <div class="fw-semibold fs-10">
-                    <i class="bi bi-calendar2-event-fill me-2 text-primary small"></i>September 24, 2022
-                </div>
-            </div>
+            <div>
+                <div class="fw-bold">{{props.commentAuthor}}</div>
+                <div class="fw-semibold fs-10"><i
+                        class="bi bi-calendar2-event-fill me-2 text-primary"></i>{{props.commentDateTime}}</div>
+            
+        <div class="mt-3">{{props.commentBody}}</div>
+                    </div>
         </div>
-        <div class="mt-3">Hello!</div>
     </div>
 </template>
   
-<script>
-import { useBlogStore } from '@/stores/blogs'
-import { useCommentStore } from '@/stores/comments'
-
-export default {
-    setup() {
-        const commentStore = useCommentStore()
-        const store = useBlogStore()
-        return {
-            commentStore,
-            store,
-        }
-    },
-}
+<script setup>
+const props = defineProps(['blogIndex', 'commentAuthor', 'commentBody', 'commentDateTime'])
 </script>
   
 <style lang="scss" scoped>
@@ -38,6 +26,8 @@ export default {
     }
 
     .user-img {
+        min-width: 36px;
+        min-height: 36px;
         width: 36px;
         height: 36px;
         background: url('https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745');
