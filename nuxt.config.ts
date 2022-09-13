@@ -18,6 +18,6 @@ export default defineNuxtConfig({
     ],
     target: 'static',
     router: {
-        base: '/nuxt-blog'
+        base: '/nuxt-blog/'
     },
 })
