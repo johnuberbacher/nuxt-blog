@@ -1,24 +1,24 @@
 
 <template>
-    <NuxtLink class="blog text-decoration-none text-dark d-block" :to="'/blog/' + props.index">
-        <div class="blog-img rounded-4 mb-3 position-relative"
+    <NuxtLink class="blog bg-white dark:bg-gray-800 hover:dark:bg-gray-700 rounded-3xl overflow-hidden text-decoration-none text-dark block shadow-sm hover:shadow-xl" :to="'/blog/' + props.index">
+        <div class="blog-img relative hover:bg-primary"
             :style="{'background-image': 'url(' + props.imageUrl + ')'}">
             <span
-                class="blog-category fs-10 shadow bg-dark px-3 py-2 rounded-pill text-white fw-bold text-uppercase position-absolute">
+                class="blog-category text-xs shadow-md bg-primary px-3 py-2 rounded-full text-white font-bold uppercase absolute right-5 top-5">
                 {{ props.category }}</span>
         </div>
-        <div class="card-body h-md-100 d-flex flex-column justify-content-between">
+        <div class="card-body p-5 h-full flex flex-col content-between">
             <div>
-                <h4 class="title mb-3">
+                <h4 class="title text-xl font-semibold mb-5 dark:text-white hover:text-primary">
                     {{props.title}}
                 </h4>
-                <div class="d-flex flex-row align-items-center mt-3">
-                    <div class="user-img rounded-circle me-3">
+                <div class="flex flex-row items-center">
+                    <div class="user-img rounded-full mr-4">
                         <div class="bg-primary"></div>
                     </div>
                     <div>
-                        <div class="fw-bold">{{props.author}}</div>
-                        <div class="fw-semibold fs-10"><i class="bi bi-calendar2-event-fill me-2 text-primary"></i>{{props.dateTime}}</div>
+                        <div class="font-semibold dark:text-white">{{props.author}}</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400"><i class="bi bi-calendar2-event-fill me-2 text-primary"></i>{{props.dateTime}}</div>
                     </div>
                 </div>
             </div>
@@ -30,16 +30,6 @@ const props = defineProps(['index', 'title', 'imageUrl', 'author', 'category', '
 </script>
 <style lang="scss" scoped>
 .blog {
-    &:hover {
-        >.blog-img {
-            box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
-            background-color: var(--bs-primary);
-        }
-
-        .title {
-            color: var(--bs-primary)
-        }
-    }
 
     .blog-img {
         height: 0;
@@ -47,12 +37,6 @@ const props = defineProps(['index', 'title', 'imageUrl', 'author', 'category', '
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
-        background-color: var(--bs-dark);
-
-        .blog-category {
-            top: 1rem;
-            right: 1rem;
-        }
     }
 
     .user-img {
