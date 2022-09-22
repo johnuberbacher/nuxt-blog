@@ -26,4 +26,3 @@ const navigationStore = useNavigationStore();
 const { addBlogModalActive } = storeToRefs(navigationStore);
 
 </script>
-<style scoped></style>

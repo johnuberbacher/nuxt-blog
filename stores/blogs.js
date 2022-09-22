@@ -61,7 +61,7 @@ export const useBlogStore = defineStore("blogs", {
       },
       {
         title: "Vestibulum lacinia arcu eget nulla",
-        imageUrl: "https://picsum.photos/640/480?random=1",
+        imageUrl: "https://picsum.photos/640/480?random=8",
         author: "Peter Parker",
         category: 0,
         dateTime: "Tuesday, Sep 12, 2022",
@@ -69,7 +69,7 @@ export const useBlogStore = defineStore("blogs", {
       },
       {
         title: "Nulla metus metus, ullamcorper vel aptent taciti sociosqu ad litora torquent",
-        imageUrl: "https://picsum.photos/640/480?random=2",
+        imageUrl: "https://picsum.photos/640/480?random=9",
         author: "John Uberbacher",
         category: 1,
         dateTime: "Tuesday, Sep 12, 2022",
@@ -77,7 +77,7 @@ export const useBlogStore = defineStore("blogs", {
       },
       {
         title: "Suspendisse in justo eu magna luctus suscipit",
-        imageUrl: "https://picsum.photos/640/480?random=3",
+        imageUrl: "https://picsum.photos/640/480?random=10",
         author: "Eddie Brock",
         category: 0,
         dateTime: "Tuesday, Sep 12, 2022",
@@ -85,7 +85,7 @@ export const useBlogStore = defineStore("blogs", {
       },
       {
         title: "Maecenas aliquet mollis lectus",
-        imageUrl: "https://picsum.photos/640/480?random=4",
+        imageUrl: "https://picsum.photos/640/480?random=11",
         author: "Harvey Dent",
         category: 1,
         dateTime: "Tuesday, Sep 13, 2022",
@@ -93,7 +93,7 @@ export const useBlogStore = defineStore("blogs", {
       },
       {
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit euismod lacus luctus magna",
-        imageUrl: "https://picsum.photos/640/480?random=5",
+        imageUrl: "https://picsum.photos/640/480?random=12",
         author: "Bruce Wayne",
         category: 0,
         dateTime: "Tuesday, Sep 13, 2022",
@@ -101,7 +101,7 @@ export const useBlogStore = defineStore("blogs", {
       },
       {
         title: "Fall Canceled After 3 Billion Seasons dui quis est pulvinar ullamcorper",
-        imageUrl: "https://picsum.photos/640/480?random=6",
+        imageUrl: "https://picsum.photos/640/480?random=13",
         author: "Barry Allen",
         category: 1,
         dateTime: "Tuesday, Sep 13, 2022",
@@ -109,7 +109,7 @@ export const useBlogStore = defineStore("blogs", {
       },
       {
         title: "Fusce nec tellus sed augue semper porta volutpat condimentum velit",
-        imageUrl: "https://picsum.photos/640/480?random=7",
+        imageUrl: "https://picsum.photos/640/480?random=14",
         author: "Oliver Queen",
         category: 0,
         dateTime: "Tuesday, Sep 13, 2022",

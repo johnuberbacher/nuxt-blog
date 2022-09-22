@@ -1,5 +1,7 @@
 <template>
-  <div class="blog-comment bg-white border dark:border-gray-600 dark:bg-gray-800 rounded-3xl p-5 my-5 hover:shadow-lg">
+  <div
+    class="blog-comment bg-white border dark:border-gray-600 dark:bg-gray-800 rounded-3xl p-5 my-5 hover:shadow-lg"
+  >
     <div class="flex flex-row items-start">
       <div class="user-img rounded-circle mr-4">
         <div class="bg-primary"></div>
@@ -25,16 +27,14 @@ const props = defineProps([
 </script>
 
 <style lang="scss" scoped>
-.blog-comment {
-  .user-img {
-    min-width: 36px;
-    min-height: 36px;
-    width: 36px;
-    height: 36px;
-    background: url("https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
+.user-img {
+  min-width: 36px;
+  min-height: 36px;
+  width: 36px;
+  height: 36px;
+  background: url("https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 </style>
