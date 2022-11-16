@@ -14,7 +14,7 @@
           :commentAuthor="comment.commentAuthor"
           :commentBody="comment.commentBody"
           :commentDateTime="comment.dateTime"
-          v-if="comment.blogIndex == this.$route.params.id"
+          v-show="comment.blogIndex == this.$route.params.id"
         >
         </BlogComment>
       </div>

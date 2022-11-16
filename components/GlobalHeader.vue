@@ -1,6 +1,6 @@
 <template>
   <Modal
-    v-if="addBlogModalActive"></Modal>
+    v-show="addBlogModalActive"></Modal>
   <header class="w-100 bg-white dark:bg-gray-800 py-3 px-5 shadow-sm hover:shadow-xl">
     <div class="w-full flex flex-row items-center justify-between">
       <NuxtLink
