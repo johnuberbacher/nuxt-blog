@@ -84,7 +84,7 @@ export default {
   methods: {
     onSubmit() {
       this.commentStore.addComment(
-        this.$route.params.id,
+        $route.params.id,
         this.name,
         this.comment,
         new Date().toLocaleDateString("en-us", {

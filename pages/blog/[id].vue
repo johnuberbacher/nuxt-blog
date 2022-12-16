@@ -2,7 +2,7 @@
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 px-5">
     <div class="lg:col-span-2">
       <BlogHero></BlogHero>
-      <p class="dark:text-white">{{ blogStore.blogs[this.$route.params.id].body }}</p>
+      <p class="dark:text-white">{{ blogStore.blogs[$route.params.id].body }}</p>
       <hr class="mt-5 mb-10 dark:border-gray-700" />
       <div
         class="d-flex flex-row align-items-start justify-content-between dark:text-white text-xl font-semibold"
@@ -14,7 +14,7 @@
           :commentAuthor="comment.commentAuthor"
           :commentBody="comment.commentBody"
           :commentDateTime="comment.dateTime"
-          v-show="comment.blogIndex == this.$route.params.id"
+          v-show="comment.blogIndex == $route.params.id"
         >
         </BlogComment>
       </div>
